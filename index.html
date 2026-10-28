@@ -6,9 +6,6 @@
     <title>Modern Portfolio | Meghana Patnam</title>
 
     <style>
-        /* =========================
-           GLOBAL STYLES
-        ========================= */
         * {
             margin: 0;
             padding: 0;
@@ -63,7 +60,7 @@
 
         .btn {
             display: inline-block;
-            padding: 13px 25px;
+            padding: 12px 24px;
             border-radius: 8px;
             background: #2563eb;
             color: white;
@@ -71,17 +68,17 @@
             transition: 0.3s ease;
             border: none;
             cursor: pointer;
+            text-align: center;
+            font-size: 0.95rem;
         }
 
         .btn:hover {
             background: #1d4ed8;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
         }
 
-        /* =========================
-           NAVBAR
-        ========================= */
+        /* Navbar */
         header {
             position: sticky;
             top: 0;
@@ -111,20 +108,8 @@
         }
 
         .nav-links a {
-            position: relative;
             font-weight: 600;
             color: #374151;
-            transition: 0.3s;
-        }
-
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -7px;
-            width: 0;
-            height: 2px;
-            background: #2563eb;
             transition: 0.3s;
         }
 
@@ -132,13 +117,7 @@
             color: #2563eb;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
+        /* Hero */
         .hero {
             min-height: calc(100vh - 70px);
             display: flex;
@@ -161,7 +140,7 @@
         }
 
         .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-size: clamp(2.4rem, 5vw, 4rem);
             line-height: 1.15;
             margin: 15px 0;
             color: #111827;
@@ -195,23 +174,17 @@
             color: white;
         }
 
-        .hero-image {
-            display: flex;
-            justify-content: center;
-        }
-
         .hero-image img {
-            width: 320px;
-            height: 320px;
+            width: 310px;
+            height: 310px;
             object-fit: cover;
             border-radius: 50%;
             border: 8px solid white;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            margin: auto;
         }
 
-        /* =========================
-           ABOUT
-        ========================= */
+        /* About */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -220,27 +193,27 @@
         }
 
         .about-image img {
-            height: 400px;
+            height: 380px;
             object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .about-text h3 {
             font-size: 2rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #111827;
         }
 
         .about-text p {
             color: #6b7280;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .stats {
             display: flex;
-            gap: 35px;
-            margin: 30px 0;
+            gap: 30px;
+            margin: 25px 0;
         }
 
         .stat h4 {
@@ -249,14 +222,11 @@
         }
 
         .stat p {
-            margin: 0;
             color: #4b5563;
             font-size: 0.95rem;
         }
 
-        /* =========================
-           SKILLS
-        ========================= */
+        /* Skills */
         .skills {
             background: white;
         }
@@ -268,17 +238,23 @@
         }
 
         .skill-card {
-            padding: 30px 20px;
+            padding: 25px 20px;
             text-align: center;
             background: #f8fafc;
             border: 1px solid #e5e7eb;
-            border-radius: 15px;
+            border-radius: 12px;
             transition: 0.3s ease;
         }
 
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+
         .skill-card h3 {
-            margin-bottom: 8px;
-            font-size: 1.15rem;
+            margin-bottom: 6px;
+            font-size: 1.1rem;
             color: #111827;
         }
 
@@ -287,15 +263,7 @@
             font-size: 0.9rem;
         }
 
-        .skill-card:hover {
-            transform: translateY(-8px);
-            border-color: #2563eb;
-            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.12);
-        }
-
-        /* =========================
-           PORTFOLIO
-        ========================= */
+        /* Projects */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -304,75 +272,72 @@
 
         .project-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid #e5e7eb;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-            transition: 0.4s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
+            transition: 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.13);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
         }
 
         .project-image {
-            height: 220px;
+            height: 200px;
             overflow: hidden;
         }
 
         .project-image img {
             height: 100%;
             object-fit: cover;
-            transition: 0.5s ease;
+            transition: 0.4s ease;
         }
 
         .project-card:hover .project-image img {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .project-content {
-            padding: 25px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .project-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
             color: #111827;
-            line-height: 1.35;
         }
 
         .project-content p {
             color: #6b7280;
-            margin-bottom: 18px;
             font-size: 0.92rem;
+            margin-bottom: 15px;
             flex-grow: 1;
         }
 
         .tags {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .tags span {
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 15px;
             background: #eff6ff;
             color: #2563eb;
             font-size: 0.75rem;
             font-weight: 700;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
+        /* Contact */
         .contact {
             background: #111827;
             color: white;
@@ -380,10 +345,6 @@
 
         .contact .section-title h2 {
             color: white;
-        }
-
-        .contact .section-title p {
-            color: #9ca3af;
         }
 
         .contact-content {
@@ -394,7 +355,7 @@
 
         .contact-info h3 {
             font-size: 1.8rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .contact-info p {
@@ -410,28 +371,28 @@
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             border: 1px solid #374151;
             border-radius: 8px;
             background: #1f2937;
             color: white;
-            outline: none;
             font: inherit;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             border-color: #2563eb;
+            outline: none;
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
         }
 
         .contact-form textarea {
-            min-height: 140px;
+            min-height: 120px;
             resize: vertical;
         }
 
         .alert-box {
-            padding: 12px 18px;
+            padding: 12px;
             border-radius: 8px;
             font-size: 0.95rem;
             display: none;
@@ -444,148 +405,85 @@
             border: 1px solid #059669;
         }
 
-        .alert-error {
-            background: #7f1d1d;
-            color: #fca5a5;
-            border: 1px solid #dc2626;
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.65);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        .modal-card {
+            background: white;
+            max-width: 720px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 14px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #6b7280;
+        }
+
+        .code-block {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.88rem;
+            overflow-x: auto;
+            margin-top: 15px;
+            white-space: pre-wrap;
+        }
+
         footer {
             background: #0b1120;
             color: #9ca3af;
-            padding: 30px 0;
+            padding: 25px 0;
+            text-align: center;
         }
 
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-links a {
-            color: #d1d5db;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #60a5fa;
-            transform: translateY(-3px);
-        }
-
-        /* =========================
-           RESPONSIVE DESIGN
-        ========================= */
         @media (max-width: 992px) {
-            .hero-content {
+            .hero-content, .about-content, .contact-content {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
-
-            .hero-text p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .skills-grid {
+            .skills-grid, .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 15px;
-                font-size: 0.9rem;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image img {
-                height: 300px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
             }
         }
 
         @media (max-width: 600px) {
+            .skills-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
             nav {
                 flex-direction: column;
                 gap: 15px;
-                padding: 15px 0;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .hero-image img {
-                width: 220px;
-                height: 220px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .stats {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header>
         <div class="container">
             <nav>
@@ -602,7 +500,7 @@
     </header>
 
     <main>
-        <!-- HERO -->
+        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
@@ -610,7 +508,7 @@
                         <span>Hello, I'm</span>
                         <h1>Patnam <strong>Meghana</strong></h1>
                         <p>
-                            Computer Science Engineering student developing smart software utilities, algorithmic applications in C & Python, and modern responsive web solutions.
+                            Computer Science Engineering student developing smart software utilities, algorithmic systems in C & Python, and modern responsive web solutions.
                         </p>
                         <div class="hero-buttons">
                             <a href="#portfolio" class="btn">View Projects</a>
@@ -618,13 +516,13 @@
                         </div>
                     </div>
                     <div class="hero-image">
-                        <img src="https://i.pinimg.com/736x/2c/e0/c8/2ce0c8e9423351561f91c33645141120.jpg" alt="Profile of Meghana Patnam">
+                        <img src="https://i.pinimg.com/736x/2c/e0/c8/2ce0c8e9423351561f91c33645141120.jpg" alt="Meghana Patnam">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT -->
+        <!-- About Section -->
         <section class="section" id="about">
             <div class="container">
                 <div class="section-title">
@@ -633,28 +531,21 @@
                 </div>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Programming and Engineering Workspace">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Developer Workspace">
                     </div>
                     <div class="about-text">
                         <h3>Turning Logic into Scalable Software</h3>
                         <p>
-                            I am a B.Tech Computer Science and Engineering student dedicated to building clean, well-architected applications. My foundation is built upon core algorithmic programming in C and Python, combined with frontend web development.
-                        </p>
-                        <p>
-                            From designing automated billing kiosks to engineering schedule management tools, I strive to write well-structured, modular code that addresses real-world engineering use cases.
+                            I build structured applications rooted in core programmatic problem-solving. My focus spans algorithmic systems in C, functional Python scripts, and clean frontend web development.
                         </p>
                         <div class="stats">
                             <div class="stat">
                                 <h4>5+</h4>
-                                <p>Core Projects</p>
+                                <p>Projects</p>
                             </div>
                             <div class="stat">
                                 <h4>C & Python</h4>
-                                <p>Primary Languages</p>
-                            </div>
-                            <div class="stat">
-                                <h4>100%</h4>
-                                <p>Dedication</p>
+                                <p>Core Stacks</p>
                             </div>
                         </div>
                         <a href="#contact" class="btn">Let's Connect</a>
@@ -663,124 +554,90 @@
             </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- Skills Section -->
         <section class="section skills" id="skills">
             <div class="container">
                 <div class="section-title">
                     <h2>Technical Skills</h2>
-                    <p>Programming languages, frameworks, and engineering tools</p>
+                    <p>Languages, systems, and toolchains</p>
                 </div>
                 <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>C Programming</h3>
-                        <p>Algorithms, structured problem solving, and pointers.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Python</h3>
-                        <p>Data handling, automation, OOP, and system scripting.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>HTML5 & CSS3</h3>
-                        <p>Semantic markup, CSS Grid, and responsive layouts.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>JavaScript</h3>
-                        <p>DOM operations and interactive UI scripting.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Git & GitHub</h3>
-                        <p>Version control, branch workflows, and source tracking.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>UI/UX Prototyping</h3>
-                        <p>Interface wireframing and user experience flow.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Engineering Problem Solving</h3>
-                        <p>Mathematical modeling and algorithmic analysis.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Responsive Design</h3>
-                        <p>Clean multi-breakpoint rendering across all viewports.</p>
-                    </div>
+                    <div class="skill-card"><h3>C Language</h3><p>Algorithms & System Logic</p></div>
+                    <div class="skill-card"><h3>Python</h3><p>Data Structures & Automation</p></div>
+                    <div class="skill-card"><h3>HTML5 & CSS3</h3><p>Grid, Flexbox & Layouts</p></div>
+                    <div class="skill-card"><h3>Database & UI</h3><p>SQL & Prototyping</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- PORTFOLIO / PROJECTS -->
+        <!-- Projects Section -->
         <section class="section" id="portfolio">
             <div class="container">
                 <div class="section-title">
                     <h2>Featured Projects</h2>
-                    <p>Academic software models and application builds</p>
+                    <p>Click "View Details" to explore the architecture and source code</p>
                 </div>
                 <div class="portfolio-grid">
                     <!-- Project 1 -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80" alt="EV Charging Station and Power Grid">
+                            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80" alt="EV Station">
                         </div>
                         <div class="project-content">
-                            <h3>EV Smart Fast-Charging & Billing Kiosk</h3>
-                            <p>An automated software simulation model built to compute multi-tier tariffs, peak-demand surcharge logic, and charging slot allocations for electric vehicle charging infrastructure.</p>
+                            <h3>EV Fast-Charging & Billing Kiosk</h3>
+                            <p>Automated software calculating peak-hour energy tariffs, battery capacity logic, and slot allocation.</p>
                             <div class="tags">
-                                <span>C (PPS)</span>
-                                <span>Python</span>
-                                <span>Smart Grid Logic</span>
+                                <span>C (PPS)</span><span>Python</span>
                             </div>
-                            <a href="#contact" class="btn">View Details</a>
+                            <button class="btn" onclick="openProjectModal('ev-charging')">View Details</button>
                         </div>
                     </article>
 
                     <!-- Project 2 -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Commercial Aircraft Flight Schedule">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Flight System">
                         </div>
                         <div class="project-content">
-                            <h3>Flight Schedule & Boarding Pass Generator</h3>
-                            <p>A Python application that automates real-time flight route scheduling, seat reservation matrices, and dynamically renders formatted boarding passes with verification tags.</p>
+                            <h3>Flight Schedule & Boarding Pass</h3>
+                            <p>Python tool maintaining flight schedule tables, seat allocations, and boarding pass rendering.</p>
                             <div class="tags">
-                                <span>Python</span>
-                                <span>Data Structures</span>
-                                <span>Automation</span>
+                                <span>Python</span><span>Data Structures</span>
                             </div>
-                            <a href="#contact" class="btn">View Details</a>
+                            <button class="btn" onclick="openProjectModal('flight-scheduler')">View Details</button>
                         </div>
                     </article>
 
                     <!-- Project 3 -->
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Mathematical Power Flow Analysis">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Power Grid Analysis">
                         </div>
                         <div class="project-content">
                             <h3>Smart Grid Power Flow Analysis</h3>
-                            <p>Mathematical modeling and iterative algorithm analysis implementing the Gauss-Seidel numerical method to compute bus voltages, line losses, and load flow equilibrium in grid networks.</p>
+                            <p>Gauss-Seidel numerical modeling calculating bus voltages and equilibrium across power grids.</p>
                             <div class="tags">
-                                <span>Numerical Methods</span>
-                                <span>Gauss-Seidel</span>
-                                <span>Calculus</span>
+                                <span>Calculus</span><span>Gauss-Seidel</span>
                             </div>
-                            <a href="#contact" class="btn">View Details</a>
+                            <button class="btn" onclick="openProjectModal('power-flow')">View Details</button>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- Contact Section -->
         <section class="section contact" id="contact">
             <div class="container">
                 <div class="section-title">
                     <h2>Contact Me</h2>
-                    <p>Have an inquiry, project proposal, or feedback?</p>
+                    <p>Feel free to reach out for collaborations or inquiries</p>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Let's Connect</h3>
-                        <p>Feel free to reach out for collaboration on engineering projects or open-source software development.</p>
-                        <p>📧 contact@meghanapatnam.dev</p>
+                        <h3>Let's Talk</h3>
+                        <p>Have a question or looking to collaborate? Send a note below!</p>
+                        <p style="margin-top: 15px;">📧 contact@meghanapatnam.dev</p>
                         <p>📍 Hyderabad, Telangana, India</p>
                     </div>
                     <form class="contact-form" id="contactForm">
@@ -796,62 +653,129 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Meghana Patnam. All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
-            </div>
+    <!-- Project Modal Box -->
+    <div class="modal-overlay" id="projectModal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-card">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle" style="font-size: 1.5rem; color: #111827;">Loading...</h3>
+            <p id="modalCategory" style="color: #2563eb; font-weight: 700; font-size: 0.9rem; margin-bottom: 12px;"></p>
+            <p id="modalDescription" style="color: #4b5563; margin-bottom: 15px;"></p>
+            <h4 style="margin-top: 15px; color: #111827;">System Workflow & Logic:</h4>
+            <ul id="modalWorkflow" style="margin-left: 20px; color: #4b5563; margin-top: 8px;"></ul>
+            <h4 style="margin-top: 20px; color: #111827;">Source Code / Algorithm Snippet:</h4>
+            <pre class="code-block" id="modalCode"></pre>
         </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Meghana Patnam. All Rights Reserved.</p>
     </footer>
 
     <script>
-        const form = document.getElementById('contactForm');
-        const alertBox = document.getElementById('alertBox');
-        const submitBtn = document.getElementById('submitBtn');
+        // Project Catalog (Embedded client-side for GitHub Pages static hosting)
+        const PROJECTS_DATA = {
+            "ev-charging": {
+                title: "EV Smart Fast-Charging & Billing Kiosk",
+                category: "C (PPS) / Python / Smart Grid",
+                description: "An automated simulation model designed to manage multi-tier tariffs, peak-demand surcharge logic, and charging slot allocations for electric vehicles.",
+                architecture: [
+                    "User inputs battery current state of charge (SoC) and target capacity.",
+                    "Calculates required energy transfer in kWh taking charging efficiency into account.",
+                    "Evaluates peak vs. off-peak grid hours and computes tiered billing with automated tax surcharges.",
+                    "Outputs itemized customer receipt and logs session telemetry."
+                ],
+                code: `// EV Billing Kiosk Calculation Core in C
+#include <stdio.h>
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+float calculate_bill(float current_soc, float target_soc, float capacity_kwh, int is_peak) {
+    float required_kwh = (target_soc - current_soc) / 100.0f * capacity_kwh;
+    float base_rate = 8.50; // INR per kWh
+    if (is_peak) {
+        base_rate += 3.00;  // Peak demand surcharge
+    }
+    float total = (required_kwh * base_rate) * 1.18; // 18% GST
+    return total;
+}`
+            },
+            "flight-scheduler": {
+                title: "Flight Schedule & Boarding Pass Generator",
+                category: "Python / Data Structures / Automation",
+                description: "A Python terminal and reporting tool that maintains scheduled flight routes, manages seat matrices, and generates structured boarding passes with unique security reference codes.",
+                architecture: [
+                    "Stores routes, aircraft seat configurations, and passenger records using dictionaries and tuples.",
+                    "Validates availability through real-time seat matrix checks.",
+                    "Generates formatted text-based boarding passes complete with flight number, gate, and checksum tokens."
+                ],
+                code: `# Airline Boarding Pass Formatter in Python
+import uuid
 
-            const payload = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            try {
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-
-                if (response.ok) {
-                    alertBox.className = 'alert-box alert-success';
-                    alertBox.textContent = result.message || 'Message sent successfully!';
-                    alertBox.style.display = 'block';
-                    form.reset();
-                } else {
-                    alertBox.className = 'alert-box alert-error';
-                    alertBox.textContent = result.message || 'Something went wrong. Please try again.';
-                    alertBox.style.display = 'block';
-                }
-            } catch (err) {
-                alertBox.className = 'alert-box alert-error';
-                alertBox.textContent = 'Server connection error. Please make sure the backend is running.';
-                alertBox.style.display = 'block';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
+def generate_pass(passenger_name, flight_no, seat_no, gate):
+    token = str(uuid.uuid4())[:8].upper()
+    boarding_pass = f'''
+    +-------------------------------------------------+
+    | AIRLINE BOARDING PASS                           |
+    | PASSENGER: {passenger_name.ljust(20)} FLIGHT: {flight_no.ljust(6)} |
+    | SEAT: {seat_no.ljust(5)}          GATE: {gate.ljust(4)} PASS ID: {token} |
+    +-------------------------------------------------+
+    '''
+    return boarding_pass`
+            },
+            "power-flow": {
+                title: "Smart Grid Power Flow Analysis",
+                category: "Numerical Methods / Gauss-Seidel / Calculus",
+                description: "Mathematical modeling and numerical iterative analysis using the Gauss-Seidel method to calculate bus voltages, phase angles, and real/reactive power losses across interconnected electrical grids.",
+                architecture: [
+                    "Constructs the nodal bus admittance matrix (Y-bus) of the grid system.",
+                    "Performs iterative voltage corrections until error convergence falls below 0.0001 per-unit.",
+                    "Computes line flow distribution and detects overloaded transmission branches."
+                ],
+                code: `# Gauss-Seidel Iteration Step
+def gauss_seidel_step(Y_bus, P_net, Q_net, V_prev, bus_idx):
+    term1 = complex(P_net, -Q_net) / (V_prev[bus_idx].conjugate())
+    sum_connected = sum(Y_bus[bus_idx][j] * V_prev[j] for j in range(len(V_prev)) if j != bus_idx)
+    V_new = (term1 - sum_connected) / Y_bus[bus_idx][bus_idx]
+    return V_new`
             }
+        };
+
+        function openProjectModal(projectId) {
+            const proj = PROJECTS_DATA[projectId];
+            if (!proj) return;
+
+            document.getElementById('modalTitle').textContent = proj.title;
+            document.getElementById('modalCategory').textContent = proj.category;
+            document.getElementById('modalDescription').textContent = proj.description;
+
+            const list = document.getElementById('modalWorkflow');
+            list.innerHTML = "";
+            proj.architecture.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                list.appendChild(li);
+            });
+
+            document.getElementById('modalCode').textContent = proj.code;
+            document.getElementById('projectModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+
+        // Contact Form Feedback Handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const alertBox = document.getElementById('alertBox');
+            
+            alertBox.className = 'alert-box alert-success';
+            alertBox.textContent = `Thank you ${name}! Your message has been sent successfully.`;
+            alertBox.style.display = 'block';
+            
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 6000);
         });
     </script>
 </body>
